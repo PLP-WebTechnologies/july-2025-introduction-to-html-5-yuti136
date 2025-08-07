@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Emusire High School's official page showcasing digital skills training and registration form." />
+  <meta name="keywords" content="Karura High School, HTML5, Form, Kenya, High School ICT, Digital Literacy, Coding" />
+  <meta name="author" content="Emusire High School ICT Club" />
+  <title>Emusire High School | HTML Skills Showcase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    header, footer {
+      background-color: #f4f4f4;
+      padding: 10px;
+      text-align: center;
+    }
+    nav ul {
+      list-style: lower roman;
+      padding: 0;
+      margin: 10px 0;
+      display: block;
+      text-align: left;
+      gap: 15px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: bold;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    table, th, td {
+      border: 1px solid #444;
+      border-collapse: collapse;
+      padding: 8px;
+    }
+    table {
+      width: 100%;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+    }
+    input, select, textarea {
+      margin-top: 5px;
+      margin-bottom: 15px;
+      display: block;
+      width: 100%;
+      padding: 8px;
+    }
+    label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!--Header section-->
+  <header>
+    <h1 id="page-title">Emusire High School - ICT Training Schedule</h1>
+    <p>Welcome to the Emusire High School demo website. 
+    This page has been designed to demonstrate how well-structured content and user-friendly features are implemented using modern HTML5 practices. The layout includes multiple sections to reflect the structure of a real high school website in Kenya.
+  </p>
+
+  <!--Navigation section-->
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#subjects">Subjects</a></li>
+        <li><a href="#schedule">Timetable</a></li>
+        <li><a href="#media">Multimedia</a></li>
+        <li><a href="#form">Student Form</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="subjects" aria-labelledby="subjects-heading">
+      <h2 id="subjects-heading">Subjects Covered in ICT Program</h2>
+      <ul>
+        <li>Computer Studies – Software and hardware basics</li>
+        <li>Mathematics – Using Excel for calculations</li>
+        <li>Business Studies – Creating digital reports</li>
+        <li>English – Typing and digital storytelling</li>
+      </ul>
+      <h3>Designing a simple page</h3>
+      <ol>
+        <li>Open a code editor like VS Code</li>
+        <li>Create an HTML file</li>
+        <li>Use semantic tags like header, section, and footer</li>
+        <li>Add forms, media, and validation</li>
+        <li>Save and preview in a browser</li>
+      </ol>
+    </section>
+
+    <!--Table used-->
+    <section id="schedule" aria-labelledby="schedule-heading">
+      <h2 id="schedule-heading">Weekly ICT Training Timetable</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Topic</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Monday</td>
+            <td>HTML Basics</td>
+            <td>9:00 AM - 10:30 AM</td>
+          </tr>
+          <tr>
+            <td>Tuesday</td>
+            <td>Working with Forms</td>
+            <td>10:45 AM - 12:15 PM</td>
+          </tr>
+          <tr>
+            <td>Wednesday</td>
+            <td>Embedding Media</td>
+            <td>2:00 PM - 3:30 PM</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!--Multimedia embedded, image, audio & video-->
+    <section id="media" aria-labelledby="media-heading">
+      <h2 id="media-heading">Multimedia Showcase</h2>
+      <h3>Students in a lab</h3>
+      <figure>
+        <a href="https://www.pexels.com/photo/students-using-computers-10638069/" target="_blank">
+        <img src="https://images.pexels.com/photos/10638069/pexels-photo-10638069.jpeg" alt="Emusire High Students using Computers" width="300">
+        </a>
+        <figcaption>Students learning HTML in the computer lab</figcaption>
+      </figure>
+
+      <h3>Listen to Our School Anthem</h3>
+      <audio controls muted autoplay>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+      </audio>
+
+      <h3>ICT Workshop Video</h3>
+      <iframe width="300" height="200"
+  src="https://www.youtube.com/embed/FUkBNno9Y8w?controls=0"
+  title="Students in Computer Lab"
+  frameborder="1"
+  allow="autoplay"
+  aria-label="Students using a computer lab">
+</iframe>
+    </section>
+
+    <!--Form section with the details-->
+    <section id="form" aria-labelledby="form-heading">
+      <h2 id="form-heading">Student Registration Form</h2>
+      <form action="https://formspree.io/f/xdkdgvvj" method="post" novalidate aria-labelledby="form-heading" autocomplete="on">
+        <fieldset>
+          <legend>Personal Information</legend>
+
+          <label for="fullname" id="label-fullname">Full Name:<span style="color: black;">*</span></label>
+          <input type="text" id="fullname" name="fullname" placeholder="Euticus Kong'o"
+                 required aria-required="true" aria-labelledby="label-fullname" minlength="3">
+
+          <label for="email" id="label-email">Email Address:<span style="color: black;">*</span></label>
+          <input type="email" id="email" name="email" placeholder="kongoeuticus@gmail.com"
+                 required aria-required="true" aria-labelledby="label-email">
+
+                <label>Gender <span style="color: black">*</span>:</label><br>
+  <input type="radio" id="male" name="gender" value="Male" required>
+  <label for="male">Male</label>
+
+  <input type="radio" id="female" name="gender" value="Female">
+  <label for="female">Female</label><br><br>
+
+
+          <label for="admission" id="label-admission">Admission Number:<span style="color: black;">*</span></label>
+          <input type="text" id="admission" name="admission" placeholder="KHS/1234"
+                 required aria-required="true" aria-labelledby="label-admission" pattern="[A-Za-z]{3,5}/[0-9]{3,5}">
+        </fieldset>
+
+        <fieldset>
+          <legend>Account Setup</legend>
+
+          <label for="username" id="label-username">Preferred Username:<span style="color: black;">*</span></label>
+          <input type="text" id="username" name="username" placeholder="yuti@yuti"
+                 required aria-required="true" aria-labelledby="label-username" minlength="5">
+
+          <label for="password" id="label-password">Password:<span style="color: black;">*</span></label>
+          <input type="password" id="password" name="password" placeholder="Use strong password"
+                 required aria-required="true" aria-labelledby="label-password"
+                 pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}"
+                 title="Must contain at least 8 characters, including letters and numbers">
+
+          <label for="confirm-password" id="label-confirm">Confirm Password:<span style="color: black;">*</span></label>
+          <input type="password" id="confirm-password" name="confirm-password"
+                 required aria-required="true" aria-labelledby="label-confirm"
+                 pattern="(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}">
+        </fieldset>
+
+        <fieldset>
+          <legend>Other Details</legend>
+
+          <label for="grade" id="label-grade">Current Grade/Form<span style="color: black;">*</span></label>
+          <select id="grade" name="grade" required aria-required="true" aria-labelledby="label-grade">
+            <option value="">Select your class</option>
+            <option value="form1">Form 1</option>
+            <option value="form2">Form 2</option>
+            <option value="form3">Form 3</option>
+            <option value="form4">Form 4</option>
+          </select>
+
+          <label for="bio" id="label-bio">Brief Bio</label>
+          <textarea id="bio" name="bio" rows="4" maxlength="250"
+                    placeholder="Tell us about your interest in computers..."
+                    aria-labelledby="label-bio"></textarea>
+
+          <label>
+            <input type="checkbox" name="agree" required aria-required="true">
+            <br><br>
+            I agree that the above information is accurate.
+          </label>
+
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <!--Footer-->
+  <footer>
+    <p>&copy; 2025 Emusire High School | ICT Department | Nairobi, Kenya</p>
+  </footer>
+</body>
+</html>
+
